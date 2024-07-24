@@ -1,0 +1,315 @@
+>>>> CLASE 1: ******************************************
+
+Compilar vs Transpilar:
+* Compilar es convertir un lenguaje de alto nivel a uno de bajo nivel (código máquina o bytecode).
+* Transpilar es el proceso de convertir un lenguaje de alto nivel a otro lenguaje de alto nivel, manteniendo el mismo nivel de abstracción.
+
+TECNOLOGÍAS:
+HTML, CSS y JS: Tecnologías básicas para la creación de sitios web.
+1. HTML para definir el contenido de las páginas web.
+2. CSS para especificar el diseño de las páginas web.
+3. JavaScript para programar el comportamiento de las páginas web (paginas de web dinámicas).
+
+* AJAX: Técnica para realizar peticiones asíncronas en JavaScript. (se piden datos y con esos datos modificar dinámicamente una parte de la pagina).
+* JSON: Formato de intercambio de datos.
+* Bootstrap: Framework de CSS para diseño responsivo.
+* npm: Gestor de paquetes para Node.js.
+* Visual Studio Code: Editor de código fuente.
+
+PROGRAMACIÓN WEB:
+* Single Page Applications: Es una única pagina, que a través de la tecnología AJAX, pide datos para actualizar secciones del sitio web y no toda la pagina.
+* Las paginas se arman de manera dinámica (antes de manera estática).
+* El archivo principal de cualquier sitio web es un archivo con extensión HTML y por convención se llama 'index.html'.
+* hay dos tiempos: tiempo de desarrollo y tiempo de producción.
+* de Desarrollo: Creación de recursos informáticos. (cuando estamos armando el codigo).
+* de Producción: Producto final en el servidor. (cuando nuestro producto esta en el disco rigido de nuestro servidor)
+* la comunicación es el protocolo http: entre cliente y servidor.
+
+CLIENTE Y SERVIDOR:
+Cliente (navegador, celular): tiene parte de hardware (la computadora propiamente dicha) y otra de software (servidor; programa).
+Tiene una IP variable.
+
+Servidor: Proveedor de recursos informáticos (archivos).
+Servidor software: programa que atiende las solicitudes del cliente.
+Tiene una IP fija.
+
+IP: Identificador del dispositivo en una red.
+
+Servidores DNS: Sistema que traduce nombres de dominio en direcciones IP (es como una lista de contactos).
+Hosting: Alquiler de espacio en un servidor.
+
+URL se envia la dirccion al DNS
+
+BASE DE DATOS:
+* Relacionales: SQL Server, MySQL. Tablas (columnas y filas).
+* No Relacionales: MongoDB. Se guardan en colecciones.
+
+HTML:
+* Estructura y contenido de la página web.
+* Etiquetas de apertura y cierre: <tag>contenido</tag>
+* Atributos dentro de las etiquetas de apertura.
+* Espacios en blanco: Usar '&nbsp;' para más de un espacio.
+* <head>: la parte que no se ve
+* <body>: es la parte que se ve
+* <style>: Regla de estilo a nivel de pagina. Mejor usar un archivo CSS para los estilos.
+* link+TAB para linkear el archivo CSS. Usar './' en los href es estándar.
+* <script> src="ruta del archivo js"
+
+Etiquetas en bloque vs. en línea:
+Bloque: Ocupan todo el ancho disponible (p.ej., <div>, <p>).
+En línea: Sólo el ancho del contenido (p.ej., <span>, <a>).
+
+CSS: lenguaje de estilos: Hojas de estilo en cascada.
+* Regla de estilo: marca la especificidad
+* Es muy importante el selector.
+
+SEO: Optimización para motores de búsqueda. Analizan el significado de los elementos dentro de una pagina.
+
+VISUAL STUDIO CODE
+para comentarios: Control + llave de cierre
+* !+TAB = esqueleto de pagina web.
+
+>>>> CLASE 2: ******************************************
+
+JavaScript (JS):
+* Es un lenguaje interpretado. Analogía: El programa arranca y de golpe ve el error. (En cambio en un lenguaje compilado si hay un error de sintaxis no se ejecuta)
+* Débilmente tipado: No hay sobrecarga de métodos ni constructores.
+* Tipado dinámico: Las variables pueden cambiar de tipo.
+* Variables: Referencias a 'direcciones de memoria' de donde esta el dato.
+* Asincronía: Usar "callbacks". (Callback (en JS) = Delegados (en c#) = Puntero a función (en c))
+* implementa el multiparadigma e implementa el paradigma de la programación funcional.
+* todas las funciones en JS retornan algo.
+* Hoisting: "Elevación" de declaraciones de variables y funciones.
+* null = es la dirección de memoria 0000
+
+BROWSERS: todos los browsers tienen una API y un interprete de JS (motor).
+APIs:
+* Timers
+* Peticiones
+* DOM (modela la pagina web)
+* Eventos
+
+OBJETO MUTABLE VS OBJETO INMUTABLE:
+* Mutable: que se puede modificar (permanece en la misma dirección de memoria)
+* Inmutable: un string por ejemplo.
+
+PROGRAMACIÓN SINCRÓNICA vs ASINCRÓNICA:
+* Sincrónica: proceso bloqueante, ejecutado línea a línea.
+* Asincrónica: proceso no bloqueante, realiza varias tareas a la vez. Eventos asíncronos.
+- en c# se manejan multi-hilos (implementa paralelismo)
+- en JS se maneja de manera concurrente, un único hilo, un único proceso.
+
+Stack > Pila > LIFO (Last in first out)
+
+CALLBACKS (el demonio de los callbacks)
+++++
+
+VARIABLES en JS:
+* var: Variable global (posibles problemas a futuro) [NO USAR].
+* let: Variable de alcance de bloque (no hace hoisting).
+* const: Valor constante. Variable de solo lectura, se guarda cualquier objeto que no debería cambiar su valor.
+En una variable let puedo guardar una referencia y luego en otra variable llamar a la misma referencia.
+usar const para arrays y objetos (como un botón)
+
+HOISTING: las declaraciones de variables y funciones son "elevadas" al comienzo del contexto de ejecución. Solo las declaraciones son elevadas, no las asignaciones.
+a) Hoisting de variables:
+* La variable declarada con 'var', se eleva al inicio del contexto de ejecución, pero la asignación no lo es. Esto da lugar a comportamientos inesperados.
+******************************************
+console.log(x); // undefined
+var x = 5;
+console.log(x); // 5
+******************************************
+* Las declaradas con 'let' y 'const' también son elevadas, pero no se inicializan. Acceder a ellas antes de su declaración resultara en un error de referencia (ReferenceError). Quedan en una "Zona Temporal Muerta" hasta que se ejecuta la declaración.
+******************************************
+console.log(y); // ReferenceError: y is not defined
+let y = 10;
+******************************************
+
+b) Hoisting de funciones:
+* Tanto la declaración como la implementación se elevan. Ejemplo:
+******************************************
+saludar(); // "Hola!"
+
+function saludar() {
+  console.log("Hola!");
+}
+******************************************
+
+c) Diferencia con expresiones de Función:
+* Solo la declaración de la variable se eleva, no la asignación de la función. Ejemplo:
+******************************************
+console.log(sumar); // undefined
+var sumar = function(a, b) {
+  return a + b;
+};
+console.log(sumar(2, 3)); // 5
+******************************************
+Undefinded: la variable no tiene un valor asignado.
+
+Concurrencia: varios procesos concurren en un mismo punto. El profe uso de ejemplo el bufet el cual Lili atiende con prioridad a los profes y luego a los alumnos, ella puede atender a ambos, pero no al mismo tiempo. Un proceso atendido por vez. Es un único hilo que va atendiendo varios proceso, pero de a 1. Es una manera de manejar la ASINCRONIA.
+
+MEMORIA: Estática vs Dinámica:
+* Estática: Reservada al declarar una variable.
+* Dinámica: Reservada con una función.
+
+
+ARROW FUNCTIONS (funciones flecha):
+* es una forma concisa de escribir funciones anónimas.
+* si tengo un solo parámetro, los paréntesis se pueden omitir. x => { cuerpo de la función }
+* las arrow functions no generan scope, toman el scope del objeto donde están definidas.
+
+SetTimeout: le paso una función y el tiempo que se tarde en ejecutarlo.
+* El SetTimeout es no bloqueante.
+* le debo pasar la función como argumento, o arrow function => [() => {cuerpo} ]
+* si a esa función no la voy a reutilizar, entonces la escribo adentro del arrow function.
+
+EVENTOS: Es asíncrona (no bloqueante). Cuando se detecta una acción del usuario o algún cambio en la pagina se lanza evento.
+* Firma: generalmente incluye el tipo del evento y la función manejadora (que puede recibir un objeto 'event' como argumento)
+* Manejador del evento (evento handler): es una función que se ejecuta en respuesta a un evento especifico.
+* addEventListener: La forma más flexible y recomendada para manejar eventos es usando addEventListener, ya que permite adjuntar múltiples manejadores de eventos al mismo elemento para el mismo evento. Firma: objeto.addEventListener("", función)
+
+>>>> CLASE 3:
+
+FUNCIONES (ciudadanos de 1ra clase):
+* son objetos
+* una función puede retornar otra función.
+* puedo definir una función dentro de otra función.
+* puedo pasar una función como argumento de otra función.
+
+DOM (Document Object Model) es una interfaz de programación para los documentos HTML y XML. Representa la página de manera estructurada y permite a los lenguajes de programación (como JavaScript) manipular la estructura, el estilo y el contenido de los documentos.
+El método 'document.getElementById' toma un único argumento, que es el valor del atributo id del elemento que deseas seleccionar. Retorna una referencia al primer objeto 'Element' con el id especificado, o 'null' si no se encuentra ningún elemento.
+Sintaxis: let elemento = document.getElementById(id); [id es un string que contiene el valor del atributo id]
+En una pagina web los id deberian ser unicos.
+
+hay dos eventos:
+* load: se lanza cuando esta renderizada la pagina (todos los recursos cargados)
+* DOMContentLoad: (en cambio, cuando creo los nodos automaticamente se dispara ese evento, y podria faltar recursos multimedias por cargar)
+
+Cualquier variable que declaramos con 'var' se cuelga del objeto Windows.
+Si yo quiero registrar en el objeto Windows un evento, con la modalidad método usamos 'addEventListener'
+
+Cada etiqueta crea un nodo.
+
+PARAMETRO FORMAL: es una variable declarada en la definición de una función para recibir valores de entrada.
+* se declaran en la definición de la función.
+* tienen un ámbito local dentro de la función.
+* reciben los valores que se pasan como argumentos durante la llamada a la función.
+* se inicializan con los valores de los argumentos pasados cuando se llama a la función.
+* permite la reutilización de codigo.
+
+Diferencia entre Parámetros Formales y Argumentos:
+* Parámetros (parámetros formales): Son las variables que se definen en la cabecera de la función para recibir los valores de entrada.
+* Argumentos (parámetro actual): Son los valores reales que se pasan a la función cuando se llama.
+[parámetro y argumento, es una nomenclatura en un lenguaje orientado a objetos.]
+
+Las funciones anónimas después no se pueden volver a llamar, ya que no tenemos guardada la dirección de memoria en una variable.
+
+API es una pequeña biblioteca: API de los timers, API de los eventos.
+
+Una pagina web termina siendo un árbol de nodos (elementos nodos, como todas las etiquetas de HTML). todos tienen el evento 'addEventListener(p1=string, p2=funcion)'.
+****************************************** [es la manera mas prolija]
+Windows.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("btnSaludo").addEventListener("click", () => {
+    console.log("hola");
+  });
+});
+******************************************
+[no es lo correcto mandar el script a la ultima linea [igualmente anda]]
+
+defer (diferir) es un atributo booleado; si esta presente en la etiqueta de apertura es True, si no lo esta es False.
+
+Etiquetas semánticas
+
+SELECTORES
+selectores desde js: de id, de etiqueta, de clase.
+selectores desde css: de id, de etiqueta, de clase.
+
+CSS:
+Selector de etiqueta es directamente el nombre de la etiqueta.
+Selector de id es con hashtag: #nombre-id
+Selector de clase es con punto: .class
+
+Especificidad de selector: id > class > tag. influyen en la tupla (id, class, tag)
+
+Short hand = atajos (lo que va en una sola linea). Por ejemplo: border: 1px solid black;
+
+Cuando veo a distintos elementos le voy a aplicar la misma regla de estilo puedo poner los selectores separado por una coma.
+
+BOX MODEL (modelo de caja)
+* Margin: los campos laterales se suman, en cambio los campos de arriba y abajo se superponen.
+* Border
+* Padding
+* Content
+
+Tenemos distintos short hand:
+* para Padding: 1 valor (los 4 costados); 2 valores (top-bottom; L-R); 3 valores(top, L-R, bottom); 4 valores (top, right, bottom y left)
+
+En la realidad se termina trabajando con proporciones o porcentajes, no en pixeles o rem.
+Lo que se suele hacer es usar "box-sizing: border-box;" en el selector universal.
+
+Para unificar filas o columnas uso row span o col span (van en una td).
+
+ETIQUETAS CONTENEDORAS: permiten definir la estructura jerárquica del documento HTML.
+* div: contenedor en bloque. (SIN EFECTO VISUAL EN LA PAGINA)
+* span: contenedor en linea. (SIN EFECTO VISUAL EN LA PAGINA)
+* header: representa la cabecera de una pagina, puede contener encabezados, logotipos, menús de navegación, etc.
+* footer: representa el pie de página, puede contener información de contacto, derechos de autor, enlaces a políticas de privacidad, etc.
+* section: define una sección de un documento, como capitulo, encabezado o alguna agrupación temática de contenido.
+* article: para articulo de revista, entrada de blog, un comentario, etc. [tienen sentido propio]
+* nav: define un bloque de enlaces de navegación, menues.
+* aside: define contenido adicional (barra lateral) [publicidad]
+* main: representa el contenido principal del documento (1 solo main por documento).
+* form: agrupa controles de formulario y etiquetas para enviar datos al servidor.
+
+>>>> CLASE 4:
+
+LISTAS en HTML:
+* Ordenadas (ol):
+* No ordenadas (ul)
+* De definición (dl): dentro tienen <dt> (termino) y <dd> (definición del termino)
+se puede cambiar el default con el atributo 'type' o desde CSS con 'list-style-type'
+
+elementos interactivos:
+* <details> (detalles): que genera un desplegable y por dentro podría usar un 'summary' (titulo de la explicación)
+* <dialog>:
+
+CDN: red de despacho de contenido
+
+IMAGENES: tenemos jpg, png (tiene transparencia), ico, bmp, svg.
+
+CADENA: rel="noopener noreferrer nofollow" (etiqueta de enlace <a>)
+noopener: Previene que la nueva página tenga acceso al objeto 'Windows.opener' del navegador, evitando potenciales ataques de phishing o redireccionamientos maliciosos.
+noreferrer: El sitio de destino no sabrá desde qué página fue el usuario. Protege la información sobre la procedencia del tráfico.
+nofollow: indica a los motores de búsqueda que no deben seguir el enlace y no deben pasar autoridad o ranking SEO al sitio de destino.
+
+Cuándo usarlos
+noopener y noreferrer: Se deben usar siempre que un enlace abra una nueva pestaña o ventana (target="_blank").
+nofollow: Se debe usar cuando se quiere evitar que los motores de búsqueda sigan el enlace, como en enlaces pagos, enlaces de usuarios en comentarios, o cualquier enlace que no se desea que pase autoridad SEO.
+
+MAQUETADO:
+* SPA: sensación de aplicación de ventana.
+* Etiquetas contenedoras: div, span, main, etc.
+
+Etiquetas semánticas:
+<time>: para fechas importantes
+<em>: énfasis
+<strong> texto importante
+<mark> texto importante
+
+MIMIFICADO: para que ocupe menos espacio
+OFUSCACION: no se puede leer
+
+MICRODATOS
+
+IFRAME
+
+FORMULARIOS <form>: nos va a permitir hacer peticiones
+cuando el formulario lanza el evento submit, nosotros tomamos el control de eso.
+* input: el atributo 'submit' es el botón enviar.
+* label: el atributo 'for' es para poder linkear lo que quiero darle foco.
+* action y method no lo vamos a usar (viene por default)
+* required es un atributo booleano. si esta, es true
+* readonly: solo lectura
+* desabled: desabilitado (hasta que pase algo, capaz)
+* placeholder: para decir que ingresar (luego desaparece)
+* evento submit: envia una petición (no lo vamos a hacer de esta forma)

@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+table {
+    border-collapse: collapse; 
+    /* border-collapse traza las lineas normales de una tabla */
+}
+tr, td, table {
+    border: 1px solid black;
+}
+td {
+    text-align: center;
+    padding: 5px, 10px;
+}
+
+/* cualquier etiqueta img que este anidada a un boton */
+button>img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+p {
+    background-color: #f00;
+}
+
+/* para que el scroleado sea suave */
+html {
+    scroll-behavior: smooth;
+}

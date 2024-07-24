@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./logica.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <title>Clase1</title>
+</head>
+<body>
+    <h1>LABORATIORIO 3</h1>
+    <h2>Clase 1</h2>
+    <h3>HTML</h3>
+    <h3>CSS</h3>
+    <h3>JavaScript</h3>
+    <p>
+        Protocolo HTTP: verbos > get (read), post (create), put (update: todo), patch (update), delete (delete).
+    </p>
+    <button onclick="saludar();">Saludar</button>
+    <br>
+    <h2>Clase 2</h2>
+    <h2>Clase 3</h2>
+    <h4>Ejercicio de tabla</h4>
+    <table>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td rowspan="3">C</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td rowspan="2">E</td>
+            <td>F</td>
+            <td rowspan="3">G</td>
+        </tr>
+        <tr>
+            <td>H</td>
+        </tr>
+        <tr>
+            <td>I</td>
+            <td>J</td>
+            <td>K</td>
+        </tr>
+    </table> <br>
+    <table>
+        <tr>
+            <td colspan="3">A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td colspan="2">D</td>
+            <td>E</td>
+        </tr>
+        <tr><td colspan="4">F</td></tr>
+        <tr>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+            <td>J</td>
+        </tr>
+    </table>
+    <h2>Clase 4</h2>
+    <h3>Listas en HTML:</h3>
+    <ul>
+        <li><a href="#tema1">Tema 1</a></li>
+        <li><a href="#tema2">Tema 2</a></li>
+        <li><a href="#tema3">Tema 3</a></li>
+        <li><a href="./pagina2.html">Pagina 2</a></li>
+        <li><a href="./pagina2.html#tema2">Ir a Tema2, Pagina 2</a></li>
+        <li><a href="https://google.com.ar" target="_blank"><i class="fab fa-google-plus-g"></i>Google</a></li>
+        <li><a href="https://www.linkedin.com/in/cristian-jorge-valverde/" target="_blank" rel="noopener noreferrer nofollow"><i class="fab fa-linkedin"></i>Linkedin</a></li>
+
+    </ul>
+    <h4 id="tema1">Tema 1</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam soluta ab perferendis molestiae nesciunt, id nulla quisquam enim eius esse maxime! Optio corporis officiis ullam animi aperiam qui voluptatum eius maxime, mollitia eveniet sed illum dolore totam dolorum nesciunt doloremque cupiditate repellendus laborum rerum ea. Repellendus magnam impedit qui magni unde eos voluptatem quasi itaque culpa blanditiis modi, sunt quis minima asperiores provident officia possimus suscipit commodi tempora repellat nobis accusamus! Blanditiis corporis unde dolores totam labore dolor quo quis iste repellendus voluptas? Culpa eveniet maxime vitae mollitia. Corporis libero quasi sapiente non, molestias consequatur atque cumque autem nam et.</p>
+    <h4 id="tema2">Tema 2</h4>
+    <a href="#top"><i class="fas fa-arrow-up"></i></a>
+    <p>Ullam sapiente odio commodi soluta, enim totam. Atque expedita temporibus officiis dignissimos amet consequatur eligendi quos, facere necessitatibus consequuntur distinctio quibusdam asperiores cum labore eveniet esse ad reiciendis illum, accusantium odit deserunt. Eaque vel corporis dolorum enim dignissimos beatae, voluptates minima facere mollitia in repellat accusantium repellendus, error est laudantium hic eius aut asperiores modi, blanditiis illo sed. Perferendis tempora natus ipsa aliquam atque, distinctio cumque eius provident eligendi laudantium ducimus, ullam, cupiditate ad! Quae molestias atque expedita neque repellat eos saepe iusto error. Magni rem consequatur veniam soluta quaerat, ad nostrum fuga quasi suscipit. Nihil incidunt eaque inventore non.</p>
+    <h4 id="tema3">Tema 3</h4>
+    <a href="#top"><i class="fas fa-arrow-up"></i></a>
+    <p>Excepturi in debitis explicabo suscipit aperiam molestiae animi rerum numquam porro, voluptas veniam, nihil doloremque harum earum libero odit placeat perferendis impedit non est amet facilis? Recusandae itaque maiores ex maxime consequatur quam eligendi earum ullam magni, soluta sed deleniti. Quam, nihil amet dolore qui doloremque repudiandae ut quibusdam harum excepturi dolorum quae fugiat illo animi soluta, commodi molestiae minima officiis numquam eligendi ipsum eveniet autem accusantium quisquam aspernatur. Unde perferendis nobis iusto earum eum at ipsa, accusamus illo sed id dolorem quam rerum perspiciatis magni repellendus, omnis quod excepturi? Voluptatem laudantium adipisci, eius dolor quo accusantium cum vitae illum.</p>
+    <h3>Elementos interactivos</h3>
+    <details>
+        <summary>Python</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum odio impedit reiciendis voluptatem fugiat. Placeat libero neque necessitatibus vel, autem doloremque itaque perspiciatis omnis eveniet facilis aperiam vero temporibus rerum.</p>
+    </details>
+    <dialog open>
+        <h3>titulo del modal</h3>
+        <p>Lorem ipsum</p>
+        <button id="btnCerrar"><i class="fas fa-window-close"></i></button>
+    </dialog>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aspernatur atque omnis sint, exercitationem porro non tenetur odio expedita reiciendis voluptatibus aperiam amet est enim illo rem mollitia hic in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nostrum fugit nemo in reiciendis fuga perferendis molestiae ullam maxime, omnis obcaecati eum modi nisi id deleniti ducimus aliquid a expedita. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veniam consequatur cumque, pariatur saepe rerum veritatis! Commodi molestias magni debitis enim iste! Quos iusto asperiores nisi optio doloremque, quidem maxime!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aspernatur atque omnis sint, exercitationem porro non tenetur odio expedita reiciendis voluptatibus aperiam amet est enim illo rem mollitia hic in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nostrum fugit nemo in reiciendis fuga perferendis molestiae ullam maxime, omnis obcaecati eum modi nisi id deleniti ducimus aliquid a expedita. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veniam consequatur cumque, pariatur saepe rerum veritatis! Commodi molestias magni debitis enim iste! Quos iusto asperiores nisi optio doloremque, quidem maxime!</p>
+    <!-- de hecho puede usarse el href="#" que apunta por defecto al principio de la pagina -->
+    <a href="#top"><i class="fas fa-arrow-up"></i></a>
+    <script src="./logica.js"></script>
+</body>
+</html>

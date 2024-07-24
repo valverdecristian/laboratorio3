@@ -1,0 +1,60 @@
+p {
+    color: black;
+    font-family: Arial;
+    line-height: 1.5;
+}
+
+h2 {
+    color: blue;
+    text-align: center;
+}
+
+ul {
+    color: black;
+    font-size: 25px;
+    font-weight: bolder; /* define el grosor */
+    line-height: 1.5;
+}
+
+.margin {
+    color: orangered;
+}
+
+.content {
+    color: cornflowerblue;
+}
+
+.border {
+    color: black;
+}
+
+.padding {
+    color: rgb(43, 216, 43);
+}
+
+div {
+    background-color: gainsboro;
+}
+
+.divborder {
+    background-color: red;
+    width: 200px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 50px;
+}
+
+
+/* 
+selector {
+    propiedad: valor ;
+}
+
+para llamar a la clase de un elemento se agrega un punto delante del selector: .clase
+para llamar a un id usamos el # : #id
+
+*/

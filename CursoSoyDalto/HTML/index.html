@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/CSS/style.css">
+</head>
+
+<body>
+	<h1>HTML BASICO</h1>
+	<p>
+		HTML no distingue entre minusculas y mayusculas, por lo que P es igual a p (para parrafos)
+	</p>
+	<h2>1 - Etiquetas</h2>
+	<p>
+		Tag: "todas las etiquetas tienen una función"<br>
+		<b>a</b>: ruta de un archivo <br>
+		<b>b</b>: texto en negrita <br>
+		<b>br</b>: salto de linea (elemento vacio) <br>
+		<b>em</b>: texto con énfasis <br>
+		<b>h1-h6</b>: para titulos/encabezados y subtitulos. h1 es la mas importante <br>
+		<b>hr</b>: define un salto temático en una página HTML <br>
+		<b>i</b>: texto en itálica <br>
+		<b>mark</b>: texto marcado <br>
+		<b>p</b>: parrafo <br>
+		<b>strike</b>: texto tachado <br>
+		<b>small</b>: texto pequeño <br>
+		<b>strong</b>: se resalta fuertemente el texto <br>
+		<b>title</b>: titulo de página (general: va en el head) <br>
+		<b>u</b>: texto subrayado <br>
+		Las etiquetas que contienen a otras etiquetas son <b>padres</b>
+	</p>
+	<h4>Etiquetas en lineas (inline) vs en bloques (block)</h4>
+	<img src="multimedia/tiposdeelementos.png" alt="tipos de elementos">
+	<h2>2 - Listas</h2>
+	<P>
+		ul: lista desordenada (no numerico) <br>
+		ol: lista ordenada (numerico) <br>
+		li: elementos de la lista <br>
+		<b>Listas dependientes (listas anidadas)</b>: simplemente se agran mas elementos ul u ol según corresponda <br>
+		<b>Listas de definicion</b>: se utiliza la etiqueta dl (y por dentro dt y dd)
+	</P>
+	<h3>Lista desordenada:</h3>
+	<ul>
+		<li>Etiquetas</li>
+		<li>Listas</li>
+		<li>Multimedia</li>
+		<li>Formularios</li>
+	</ul>
+	<h3>Lista de definicion:</h3>
+	<dl>
+		<dt>Leche</dt>
+			<dd>Descremada</dd>
+			<dd>Entera</dd>
+		<dt>Queso</dt>
+			<dd>Fontina</dd>
+			<dd>Mozzarella</dd>
+	</dl>
+	<h2>3 - Multimedia</h2>
+	<p>
+		<b>img</b>: define una imagen <br>
+		<b>video</b>: define un video <br>
+		<b>audio</b>: define un audio
+		<h4>Atributos:</h4>
+		<ul>
+			<li>controls:</li>
+			<li>src: especifica la ruta/URL del archivo. Ruta absoluta/relativa</li>
+			<li>alt: proporciona un texto alternativo para el archivo</li>
+			<li>title="información sobre el elemento" (aparece cuando pasamos por encima del elemento)</li>
+			<li> <a href="enlaces.html" target="_blank" name="Multimedia">Imagen</a> </li>
+		</ul>
+	</p>
+	<h2>4 - Enlaces/Hipervinculos</h2>
+	<p>
+		Permite vincular unas páginas con otras. Para esto usamos el elemento <b>"a"</b> con el atributo <b>href</b> <br>
+		<b>a</b>: ruta de un archivo
+		<h4>Atributos:</h4>
+		<b>href</b>: Especifica la URL de la página a dirigirse <br>
+		<b>target</b>: Especifica donde abrir el documento vinculado, algunas opciones son: <br>
+		"_self": por defecto, se abre en la misma pestaña. <br>
+		"_blank": para que se abra en una nueva pestaña, sin embargo puede tener implicaciones de seguridad,
+		para mitigar riesgos de seguridad, es recomendable añadir 'rel=noopener noreferrer' al enlace. <br>
+		<b>download</b>: Especifica cuál es el objeto que se descargará cuando un usuario haga clic en el hipervínculo. <br>
+		<b>title</b>: Especifica información adicional sobre un elemento.
+		<ul>
+			<li> <a href="https://github.com/valverdecristian/" target="_BLANK">GitHub</a> </li>
+			<li> <a href="https://www.linkedin.com/in/cristian-jorge-valverde/" target="_blank">Linkedin</a> </li>
+			<li> <a href="mailto:cristianvalverdeundav@gmail.com?subject=Contacto">Enviar correo</a> </li>
+		</ul>
+		Si queremos enlazar un archivo que esta dentro de una carpeta: carpeta/pagina.html <br>
+		Para volver una carpeta anterior se usan dos puntos: ../pagina.html <br>
+		<h4>Enlaces internos (anclas)</h4>
+		<p>
+			Se utiliza para indicar un elemento dentro de la misma página, dirigiéndose a un sector especifico. Para
+			esto necesitamos el enlace propiamente dicho y el nombre (name) del ancla al cual debemos dirigirlo.
+		</p>
+		<a href="#Multimedia">Ir a imagen</a>
+
+	</p>
+	<h2>4 - Formularios</h2>
+	<p>
+		Se usa para pedir informacion/datos al usuario <br>
+		<b>form</b>: define/construye un formulario. Una vez definido se debe indicar que tipo de inputs vamos a querer<br>
+		<b>input</b>: lo usamos para entrada de datos<br>
+		<h4>Atributos de input:</h4>
+		<ul>
+			<li>type="text" (permite tipear texto) </li>
+			<li>type="color" (permite seleccionar colores)</li>
+			<li>type="submit" (para enviar la informacion a un servidor)</li>
+			<li>type="file" (permite seleccionar un archivo)</li>
+			<li>y hay muchos otros type, depende que informacion requiera</li>
+			<li><b>required</b>: campo requerido/obligatorio</li>
+			<li><b>name</b>: identificador de los inputs (lo que le llega al servidor/nombre de campo: ej username)></li>
+			<li><b>placeholder</b>: escribe texto (por ejemplo la info que requerimos)</li>
+		</ul>
+	</p>
+	<form>
+		<input type="text">
+		<input type="color">
+		<input type="email">
+		<input type="password">
+		<input type="submit" value="enviar">
+	</form>
+	<h2> <a href="css.html">IR A CSS</a></h2>
+</body>
+
+</html>
+
+<!--
+form: define un formulario HTML para la entrada del usuario
+a: define un hipervinculo
+input: define un control de entrada de datos
+button: define un boton clickable
+label: define una etiqueta para un elemento <input>
+submit: viene con un value por defecto
+textarea: define un area de texto de varias lineas, campo modificable de tamaño.
+article: especifica contenido independiente
+section: define una seccion en un documento
+aside: define contenido lateral, relacionado indirectamente con el contendido principal
+footer: pie de pagina (copyright)
+
+table: define una tabla
+thead:
+tr: define una fila en una tabla
+td: define una celda en una tabla
+th: define una celda de encabezado en una tabla
+tfoot: van los valores totales
+
+div: define una division o seccion en un documento HTML
+span: define una seccion en linea en un documento
+select: define un cuadro de lista desplegable
+option: define una opcion en un cuadro de lista despegable
+center: centra el contenido (mejor con css)
+
+Atributos:
+class: especifica uno o mas nombres de clase para un elemento
+id: identificador unico en el documento (usar # para ir al id)
+style: define estilos CSS en linea para un elemento
+title: proporciona informacion adicional (encima de la img por ejemplo)
+alt: texto que va a aparecer si la imagen no se carga correctamente
+
+name: especifica el nombre de un elemento (input, select, textarea, para enviar datos del formulario)
+required: campo requerido (sino no se envia)
+readonly: solo lectura (no se puede escribir adentro)
+value: especifica el valor de un elemento de entrada (utilizado en input, option, button)
+
+las validaciones se deben hacer del lado del back para evitar hackeo
+y no consumir recurso innecesariamente
+
+href: especifica la URL de la pagina a la que enlaza un hipervinculo
+
+-->
+
+<!-- METADATOS
+	charset: conjunto de caracteres, codificacion universal
+	meta: va en el head, informacion que usa el buscador para relacionarlo con nuestra pagina, que va en content=""
+	ej: content="harina, leche, galletitas"
+
+
+	name: "description" para describir la pagina.
+	name: "keywords" relacionado con nuestra pagina
+	name: "author" autor de la pagina
+	name: "copyright"
+	name: "robots" index o noindex
+
+-->
