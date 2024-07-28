@@ -1,4 +1,88 @@
-notas2
-
 >>>> CLASE 5:
 
+* Sigue parte de la explicación de los FORMULARIOS
+
+fieldset: contiene la etiqueta 'legend'
+select: contiene la etiqueta 'option'
+textarea: caja de texto multi-linea.
+
+MODULOS:
+
+operadores unarios: tiene un solo operando. Ejemplo: typeof
+
+En JS esta bien tener mas de un return.
+Casteo: convertir un tipo de dato numérico a otro numérico
+Parseo: convertir un tipo string a numérico.
+
+Si tengo dos funciones que se llaman iguales y están en el mismo modulo, lo que va a pasar es que se va a mostrar el resultado de la 2da función. Lo mismo pasaría si tengo dos modulos con la misma función, va a ganar la que este declarada como 2do script (en el HTML)
+
+CLOSURE: no lo vamos a usar, se usaba hasta el 2015
+
+OPERADOR TERNARIO: ? true : false
+
+PARADIGMA DE PROGRAMACION FUNCIONAL:
+* puedo definir una función dentro de otra.
+
+Importación de módulos:
+* Ahora podemos usar el atributo type="module" y así ese script puede solicitar otros scripts.
+* Importación por default: Una sola función puede exportarse por default.
+
+FUNCIONES DECLARADAS VS FUNCIONES EXPRESADAS:
+* Funciones Declaradas: son aquellas que se definen utilizando la palabra clave 'function', seguidas por el nombre de la función y el cuerpo. Estas funciones son 'hoisted' al inicio del contexto de ejecución, lo que significa que pueden ser invocadas antes de su definición en el código.
+
+* Funciones Expresadas: son aquellas que se definen como una expresión, es decir, se asignan a una variable. Estas funciones no son 'hoisted', por lo que no pueden ser invocadas antes de su definición en el código. Se utilizan a menudo en contextos donde las funciones se asignan como manejadores de eventos, callbacks, o se pasan como argumentos a otras funciones. Pueden mejorar el encapsulamiento y la modularidad del código.
+
+ - las funciones expresadas y declaradas toman como this al objeto donde fueron declaradas
+ - pero las arrow function heredan el this de donde están declaradas [window]. No toman el scope de donde están declaradas.
+
+
+>>>> CLASE 6:
+
+Una función es de tipo objeto.
+
+Generadores: es como un "getter" que va sumando cada vez que se llama
+
+OBJETOS: es un conjunto de clave-valor
+  * Un objeto no es iterable.
+    - objeto literal
+    - objeto a través del constructor
+    - objeto a través de 'Object.create()'
+
+ - un OBJETO LITERAL se define usando llaves '{}'. Permite la inicialización directa de sus propiedades.
+ - un OBJETO A TRAVES DE UN CONSTRUCTOR se utiliza 'new Object()', también se puede inicializar con un valor primitivo, que será envuelto en su correspondiente objeto.
+ - OBJECT.CREATE(proto) crea un nuevo objeto que hereda de proto, es útil para establecer la herencia entre objetos sin necesidad de una función constructora.
+ - ACCESO A PROPIEDADES: de un objeto a través de la notación punto o de corchetes. La notación de corchetes permite el uso de variables para acceder a las propiedades.
+
+RECORRER UN OBJETO:
+Object.entries(obj) devuelve un array de pares [clave, valor].
+Object.values(obj) devuelve un array con los valores de las propiedades.
+Object.keys(obj) devuelve un array con las claves de las propiedades.
+
+BUCLES:
+for...in: Recorre todas las claves de un objeto.
+for...of: Recorre los valores de una estructura iterable (arrays, strings, etc.). No se puede usar directamente sobre objetos.
+forEach: Itera sobre arrays y ejecuta una función de callback en cada elemento.
+
+CADENA PROTOTIPICA:
+
+VALOR PRIMITIVO:
+* cadenas: ""
+* number = 0
+* boolean = false
+
+ARRAY:
+  - pueden contener elementos de diferentes tipos de datos. [no se necesita un ArrayList para lograrlo]
+  - se pueden agregar y eliminar elementos en cualquier momento.
+  - elementos accesibles a través de índices numéricos. [indexado]
+Desectruturacion de Array:
+  - tiene varios métodos como forEach
+
+OPERACION POR CORTOCIRCUITO:
+ - en un && cuando el de la izquierda es falso, no analiza el de la derecha.
+ - en cambio si es verdadero, esta obligado a evaluar el de la derecha.
+ - en un & se evalúan ambos casos.
+ - 0 es false, todo lo demás es true.
+
+Los métodos call, apply y bind son utilizados para establecer el valor de this dentro de una función.
+
+CALL: llama a una función con un valor this dado y argumentos proporcionados individualmente.

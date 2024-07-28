@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina 2</title>
-    <!-- <script src="./logica2.js"></script> -->
+    <script src="./cadenas.js"></script>
+    <script src="./app.js" type="module"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 </head>
@@ -55,8 +56,23 @@
             <li>500-599: Del lado del servidor</li>
         </ul>
         <a href="https://http.cat/" target="_blank">HTTP CAT</a>
+
+    <h3>App/Calculadora</h3>
     
-    <script src="./logica2.js"></script>
-    <script src="./index.js"></script>
+    <form>
+        <input type="text" id="xxx">
+    </form>
+
+    <script>
+
+        document.getElementById("xxx").addEventListener("paste", 
+            function(e) {
+                e.preventDefault();
+                return false;
+            }
+        )
+    </script>
+
+
 </body>
 </html>

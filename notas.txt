@@ -79,7 +79,7 @@ JavaScript (JS):
 * Asincronía: Usar "callbacks". (Callback (en JS) = Delegados (en c#) = Puntero a función (en c))
 * implementa el multiparadigma e implementa el paradigma de la programación funcional.
 * todas las funciones en JS retornan algo.
-* Hoisting: "Elevación" de declaraciones de variables y funciones.
+* Hoisted: "Elevación" de declaraciones de variables y funciones.
 * null = es la dirección de memoria 0000
 
 BROWSERS: todos los browsers tienen una API y un interprete de JS (motor).
@@ -150,7 +150,7 @@ Concurrencia: varios procesos concurren en un mismo punto. El profe uso de ejemp
 
 MEMORIA: Estática vs Dinámica:
 * Estática: Reservada al declarar una variable.
-* Dinámica: Reservada con una función.
+* Dinámica: Reservada con una función. todo lo que esta en la memoria dinámica es anonimo 
 
 
 ARROW FUNCTIONS (funciones flecha):
@@ -266,23 +266,23 @@ ETIQUETAS CONTENEDORAS: permiten definir la estructura jerárquica del documento
 LISTAS en HTML:
 * Ordenadas (ol):
 * No ordenadas (ul)
-* De definición (dl): dentro tienen <dt> (termino) y <dd> (definición del termino)
+* De definición (dl): dentro tienen <dt> (término) y <dd> (definición del término)
 se puede cambiar el default con el atributo 'type' o desde CSS con 'list-style-type'
 
 elementos interactivos:
-* <details> (detalles): que genera un desplegable y por dentro podría usar un 'summary' (titulo de la explicación)
+* <details> (detalles): genera un desplegable y por dentro podría usar un 'summary' (titulo de la explicación)
 * <dialog>:
 
 CDN: red de despacho de contenido
 
-IMAGENES: tenemos jpg, png (tiene transparencia), ico, bmp, svg.
+IMAGENES: formatos: jpg, png (tiene transparencia), ico, bmp, svg.
 
 CADENA: rel="noopener noreferrer nofollow" (etiqueta de enlace <a>)
-noopener: Previene que la nueva página tenga acceso al objeto 'Windows.opener' del navegador, evitando potenciales ataques de phishing o redireccionamientos maliciosos.
-noreferrer: El sitio de destino no sabrá desde qué página fue el usuario. Protege la información sobre la procedencia del tráfico.
-nofollow: indica a los motores de búsqueda que no deben seguir el enlace y no deben pasar autoridad o ranking SEO al sitio de destino.
+* noopener: Previene que la nueva página tenga acceso al objeto 'Windows.opener' del navegador, evitando potenciales ataques de phishing o redireccionamientos maliciosos.
+* noreferrer: El sitio de destino no sabrá desde qué página fue el usuario. Protege la información sobre la procedencia del tráfico.
+* nofollow: indica a los motores de búsqueda que no deben seguir el enlace y no deben pasar autoridad o ranking SEO al sitio de destino.
 
-Cuándo usarlos
+Cuándo usarlos:
 noopener y noreferrer: Se deben usar siempre que un enlace abra una nueva pestaña o ventana (target="_blank").
 nofollow: Se debe usar cuando se quiere evitar que los motores de búsqueda sigan el enlace, como en enlaces pagos, enlaces de usuarios en comentarios, o cualquier enlace que no se desea que pase autoridad SEO.
 
@@ -294,22 +294,24 @@ Etiquetas semánticas:
 <time>: para fechas importantes
 <em>: énfasis
 <strong> texto importante
-<mark> texto importante
+<mark> texto resaltado.
 
-MIMIFICADO: para que ocupe menos espacio
-OFUSCACION: no se puede leer
+MINIFICADO: Proceso de reducir el tamaño de archivos para que ocupen menos espacio.
+OFUSCACIÓN: Proceso de hacer que el código sea difícil de leer y entender.
 
-MICRODATOS
+MICRODATOS: Marcado estructurado en HTML para proporcionar datos adicionales.
 
-IFRAME
+IFRAME: Elemento HTML para incrustar otro documento HTML dentro de la página actual.
 
-FORMULARIOS <form>: nos va a permitir hacer peticiones
-cuando el formulario lanza el evento submit, nosotros tomamos el control de eso.
-* input: el atributo 'submit' es el botón enviar.
-* label: el atributo 'for' es para poder linkear lo que quiero darle foco.
+FORMULARIOS <form>: nos va a permitir hacer peticiones.
+Cuando el formulario lanza el evento 'submit', nosotros tomamos el control de eso.
+
+Elementos del formulario:
+* input: el atributo type='submit' es el botón enviar. otros atributos: cheekbox, radio, text, number, etc.
+* label: el atributo 'for' es para vincularlo con un elemento de formulario y darle foco.
 * action y method no lo vamos a usar (viene por default)
-* required es un atributo booleano. si esta, es true
+* required es un atributo booleano. si esta presente, es true
 * readonly: solo lectura
-* desabled: desabilitado (hasta que pase algo, capaz)
-* placeholder: para decir que ingresar (luego desaparece)
-* evento submit: envia una petición (no lo vamos a hacer de esta forma)
+* desabled: deshabilitado (hasta que pase algo)
+* placeholder: para indicar que ingresar (luego desaparece)
+* evento submit: envía una petición (no lo vamos a hacer de esta forma)
