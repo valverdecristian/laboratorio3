@@ -54,6 +54,7 @@ HTML:
 * <style>: Regla de estilo a nivel de pagina. Mejor usar un archivo CSS para los estilos.
 * link+TAB para linkear el archivo CSS. Usar './' en los href es estándar.
 * <script> src="ruta del archivo js"
+* los ID son únicos.
 
 Etiquetas en bloque vs. en línea:
 Bloque: Ocupan todo el ancho disponible (p.ej., <div>, <p>).
@@ -79,7 +80,7 @@ JavaScript (JS):
 * Asincronía: Usar "callbacks". (Callback (en JS) = Delegados (en c#) = Puntero a función (en c))
 * implementa el multiparadigma e implementa el paradigma de la programación funcional.
 * todas las funciones en JS retornan algo.
-* Hoisted: "Elevación" de declaraciones de variables y funciones.
+* Hoisting: "Elevación" de declaraciones de variables y funciones.
 * null = es la dirección de memoria 0000
 
 BROWSERS: todos los browsers tienen una API y un interprete de JS (motor).
@@ -95,14 +96,40 @@ OBJETO MUTABLE VS OBJETO INMUTABLE:
 
 PROGRAMACIÓN SINCRÓNICA vs ASINCRÓNICA:
 * Sincrónica: proceso bloqueante, ejecutado línea a línea.
-* Asincrónica: proceso no bloqueante, realiza varias tareas a la vez. Eventos asíncronos.
+* Asincrónica: proceso no bloqueante, realiza varias tareas a la vez.
+
+Eventos asíncronos.
 - en c# se manejan multi-hilos (implementa paralelismo)
 - en JS se maneja de manera concurrente, un único hilo, un único proceso.
 
-Stack > Pila > LIFO (Last in first out)
+CALLBACKS:
+ - promesas
+ - funciones asíncronas
 
-CALLBACKS (el demonio de los callbacks)
-++++
+SetTimeout: le paso una función y el tiempo que se tarde en ejecutarlo.
+* El SetTimeout es no bloqueante.
+* le debo pasar la función como argumento, o arrow function.
+* si a esa función no la voy a reutilizar, entonces la escribo adentro del arrow function.
+
+MEMORIA:
+* Estática: Reservada al declarar una variable.
+* Dinámica: Reservada al declarar una función.
+
+En un lenguaje estructurado hay dos parámetros: formales y actuales.
+Parámetros formales: son los que están en la función.
+Parámetros actuales: se utilizan en la llamada a la función.
+Como estamos en un lenguaje de alto nivel (u POO) se llaman parámetros y argumento.
+
+PARAMETRO: es una variable declarada en la definición de una función para recibir valores de entrada.
+* se declaran en la definición de la función.
+* permite la reutilización de codigo.
+
+ARGUMENTO: Son los valores reales que se pasan a la función cuando se llama.
+
+Literal de función: es cuando le paso una función como argumento a otra función [funciones expresadas].
+Función anónima: no tiene nombre, pero uso la palabra 'function'. Las funciones anónimas después no se pueden volver a llamar, ya que no tenemos guardada la dirección de memoria en una variable.
+
+Función nombrada y función expresada
 
 VARIABLES en JS:
 * var: Variable global (posibles problemas a futuro) [NO USAR].
@@ -144,29 +171,23 @@ var sumar = function(a, b) {
 };
 console.log(sumar(2, 3)); // 5
 ******************************************
-Undefinded: la variable no tiene un valor asignado.
 
-Concurrencia: varios procesos concurren en un mismo punto. El profe uso de ejemplo el bufet el cual Lili atiende con prioridad a los profes y luego a los alumnos, ella puede atender a ambos, pero no al mismo tiempo. Un proceso atendido por vez. Es un único hilo que va atendiendo varios proceso, pero de a 1. Es una manera de manejar la ASINCRONIA.
-
-MEMORIA: Estática vs Dinámica:
-* Estática: Reservada al declarar una variable.
-* Dinámica: Reservada con una función. todo lo que esta en la memoria dinámica es anonimo 
-
-
-ARROW FUNCTIONS (funciones flecha):
+ARROW FUNCTIONS (funciones flecha): [mejor explicado en la clase de Objetos]
 * es una forma concisa de escribir funciones anónimas.
 * si tengo un solo parámetro, los paréntesis se pueden omitir. x => { cuerpo de la función }
 * las arrow functions no generan scope, toman el scope del objeto donde están definidas.
 
-SetTimeout: le paso una función y el tiempo que se tarde en ejecutarlo.
-* El SetTimeout es no bloqueante.
-* le debo pasar la función como argumento, o arrow function => [() => {cuerpo} ]
-* si a esa función no la voy a reutilizar, entonces la escribo adentro del arrow function.
+CONCURRENCIA: varios procesos concurren a la vez.
+El profe uso de ejemplo el bufet el cual Lili atiende con prioridad a los profes y luego a los alumnos, ella puede atender a ambos, pero no al mismo tiempo.
+Es un único hilo que va atendiendo varios procesos. Es una manera de manejar la ASINCRONIA.
 
 EVENTOS: Es asíncrona (no bloqueante). Cuando se detecta una acción del usuario o algún cambio en la pagina se lanza evento.
 * Firma: generalmente incluye el tipo del evento y la función manejadora (que puede recibir un objeto 'event' como argumento)
 * Manejador del evento (evento handler): es una función que se ejecuta en respuesta a un evento especifico.
-* addEventListener: La forma más flexible y recomendada para manejar eventos es usando addEventListener, ya que permite adjuntar múltiples manejadores de eventos al mismo elemento para el mismo evento. Firma: objeto.addEventListener("", función)
+
+* addEventListener: La forma más flexible y recomendada para manejar eventos es usando addEventListener, ya que permite adjuntar múltiples manejadores de eventos al mismo elemento para el mismo evento.
+
+Firma: objeto.addEventListener("", función)
 
 >>>> CLASE 3:
 
@@ -176,51 +197,36 @@ FUNCIONES (ciudadanos de 1ra clase):
 * puedo definir una función dentro de otra función.
 * puedo pasar una función como argumento de otra función.
 
-DOM (Document Object Model) es una interfaz de programación para los documentos HTML y XML. Representa la página de manera estructurada y permite a los lenguajes de programación (como JavaScript) manipular la estructura, el estilo y el contenido de los documentos.
-El método 'document.getElementById' toma un único argumento, que es el valor del atributo id del elemento que deseas seleccionar. Retorna una referencia al primer objeto 'Element' con el id especificado, o 'null' si no se encuentra ningún elemento.
-Sintaxis: let elemento = document.getElementById(id); [id es un string que contiene el valor del atributo id]
-En una pagina web los id deberian ser unicos.
-
 hay dos eventos:
 * load: se lanza cuando esta renderizada la pagina (todos los recursos cargados)
-* DOMContentLoad: (en cambio, cuando creo los nodos automaticamente se dispara ese evento, y podria faltar recursos multimedias por cargar)
+* DOMContentLoad: (en cambio, cuando creo los nodos automáticamente se dispara ese evento, y podría faltar recursos multimedios por cargar)
 
-Cualquier variable que declaramos con 'var' se cuelga del objeto Windows.
+El método 'document.getElementById' toma un único argumento, que es el valor del atributo id del elemento que deseas seleccionar. Retorna una referencia al primer objeto 'Element' con el id especificado, o 'null' si no se encuentra ningún elemento.
+
 Si yo quiero registrar en el objeto Windows un evento, con la modalidad método usamos 'addEventListener'
 
-Cada etiqueta crea un nodo.
-
-PARAMETRO FORMAL: es una variable declarada en la definición de una función para recibir valores de entrada.
-* se declaran en la definición de la función.
-* tienen un ámbito local dentro de la función.
-* reciben los valores que se pasan como argumentos durante la llamada a la función.
-* se inicializan con los valores de los argumentos pasados cuando se llama a la función.
-* permite la reutilización de codigo.
-
-Diferencia entre Parámetros Formales y Argumentos:
-* Parámetros (parámetros formales): Son las variables que se definen en la cabecera de la función para recibir los valores de entrada.
-* Argumentos (parámetro actual): Son los valores reales que se pasan a la función cuando se llama.
-[parámetro y argumento, es una nomenclatura en un lenguaje orientado a objetos.]
-
-Las funciones anónimas después no se pueden volver a llamar, ya que no tenemos guardada la dirección de memoria en una variable.
-
-API es una pequeña biblioteca: API de los timers, API de los eventos.
-
 Una pagina web termina siendo un árbol de nodos (elementos nodos, como todas las etiquetas de HTML). todos tienen el evento 'addEventListener(p1=string, p2=funcion)'.
+
 ****************************************** [es la manera mas prolija]
+
 Windows.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btnSaludo").addEventListener("click", () => {
     console.log("hola");
   });
 });
+
 ******************************************
 [no es lo correcto mandar el script a la ultima linea [igualmente anda]]
 
-defer (diferir) es un atributo booleado; si esta presente en la etiqueta de apertura es True, si no lo esta es False.
+defer (diferir) es un atributo booleado; si esta presente en la etiqueta de apertura es True, si no lo esta es False. [en el script]
 
-Etiquetas semánticas
+Etiquetas semánticas:
+* Table
+  - Thead: encabezado, donde están los tr y th (celdas)
+  - Tbody: tr y th
+  - Tfoot: para valores totales
 
-SELECTORES
+SELECTORES tenemos en:
 selectores desde js: de id, de etiqueta, de clase.
 selectores desde css: de id, de etiqueta, de clase.
 
@@ -231,15 +237,15 @@ Selector de clase es con punto: .class
 
 Especificidad de selector: id > class > tag. influyen en la tupla (id, class, tag)
 
-Short hand = atajos (lo que va en una sola linea). Por ejemplo: border: 1px solid black;
+Short hand = atajos (lo que va en una sola linea).
 
 Cuando veo a distintos elementos le voy a aplicar la misma regla de estilo puedo poner los selectores separado por una coma.
 
 BOX MODEL (modelo de caja)
 * Margin: los campos laterales se suman, en cambio los campos de arriba y abajo se superponen.
-* Border
-* Padding
-* Content
+* Border: borde alrededor del padding y content.
+* Padding: espacio entre contenido y el borde.
+* Content: área donde muestra el contendio (texto, img)
 
 Tenemos distintos short hand:
 * para Padding: 1 valor (los 4 costados); 2 valores (top-bottom; L-R); 3 valores(top, L-R, bottom); 4 valores (top, right, bottom y left)

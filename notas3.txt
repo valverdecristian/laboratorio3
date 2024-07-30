@@ -1,4 +1,9 @@
-notas3
-
 >>>> CLASE 7:
+
+La manera de construir objetos en js es a través de 'funciones constructoras'
+ - para crear e inicializar objetos.
+ - se usan con el operador 'new' (objeto vacio)
+ - por convención, el nombre de la función empieza en Mayúscula
+ - [las funciones regulares empiezan con minúsculas]
+ - 'this' dentro de la función se refiere a ese nuevo objeto.
 

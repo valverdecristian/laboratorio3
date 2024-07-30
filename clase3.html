@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./addEventListener.js"></script>
+    <title>Clase3</title>
+</head>
+<body>
+    <button id="btnSaludo">Saludar</button>
+    <p>
+        eventos que se lanzan cuando se termina de renderizar una pagina web <br>
+        * evento load <br>
+        * evento DOMContLoad
+    </p>
+
+    <h4>tablas</h4>
+    <table id="tabla-materias" class="azul">
+        <thead>
+            <tr>
+                <th class="encabezado">Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Programacion</td>
+                <td>Laboratorio</td>
+                <td>Organizacion</td>
+                <td>Empresarial</td>
+                <td>Investigacion</td>
+            </tr>
+            <tr>
+                <td>Programacion</td>
+                <td>Laboratorio</td>
+                <td>Organizacion</td>
+                <td>Empresarial</td>
+                <td>Investigacion</td>
+            </tr>
+            <tr>
+                <td>Programacion</td>
+                <td>Laboratorio</td>
+                <td>Organizacion</td>
+                <td>Empresarial</td>
+                <td>Investigacion</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Pie de tabla</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h5>Ejercicio de tabla</h5>
+    <table>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td rowspan="3">C</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td rowspan="2">E</td>
+            <td>F</td>
+            <td rowspan="3">G</td>
+        </tr>
+        <tr>
+            <td>H</td>
+        </tr>
+        <tr>
+            <td>I</td>
+            <td>J</td>
+            <td>K</td>
+        </tr>
+    </table> <br>
+    <table>
+        <tr>
+            <td colspan="3">A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td colspan="2">D</td>
+            <td>E</td>
+        </tr>
+        <tr><td colspan="4">F</td></tr>
+        <tr>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+            <td>J</td>
+        </tr>
+    </table>
+
+</body>
+</html>

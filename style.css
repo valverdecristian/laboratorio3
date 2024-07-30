@@ -1,16 +1,25 @@
+/* en todas las propiedades de CSS voy a tener SHORT HAND */
+
 *{
     box-sizing: border-box;
 }
+
 table {
+    /* border-propiedades */
     border-collapse: collapse; 
     /* border-collapse traza las lineas normales de una tabla */
 }
-tr, td, table {
+
+/* reuilizacion de reglas de estilo */
+tr,th, table {
     border: 1px solid black;
 }
+
 td {
-    text-align: center;
-    padding: 5px, 10px;
+    padding: 10px;
+    border: 1px solid black;
+    color: blue;
+    text-align:center;
 }
 
 /* cualquier etiqueta img que este anidada a un boton */
@@ -26,4 +35,14 @@ p {
 /* para que el scroleado sea suave */
 html {
     scroll-behavior: smooth;
+}
+
+/* selector por ID */
+#tabla-materias {
+    border-color: violet;
+}
+
+/* selector de clase */
+.azul {
+    color: green;
 }
