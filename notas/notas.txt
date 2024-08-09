@@ -1,4 +1,4 @@
->>>> CLASE 1: ******************************************
+>>>> CLASE 1: **** REPASADO ****
 
 Compilar vs Transpilar:
 * Compilar es convertir un lenguaje de alto nivel a uno de bajo nivel (código máquina o bytecode).
@@ -70,7 +70,7 @@ VISUAL STUDIO CODE
 para comentarios: Control + llave de cierre
 * !+TAB = esqueleto de pagina web.
 
->>>> CLASE 2: ******************************************
+>>>> CLASE 2: **** REPASADO ****
 
 JavaScript (JS):
 * Es un lenguaje interpretado. Analogía: El programa arranca y de golpe ve el error. (En cambio en un lenguaje compilado si hay un error de sintaxis no se ejecuta)
@@ -189,7 +189,7 @@ EVENTOS: Es asíncrona (no bloqueante). Cuando se detecta una acción del usuari
 
 Firma: objeto.addEventListener("", función)
 
->>>> CLASE 3:
+>>>> CLASE 3: **** REPASADO ****
 
 FUNCIONES (ciudadanos de 1ra clase):
 * son objetos
@@ -222,22 +222,21 @@ defer (diferir) es un atributo booleado; si esta presente en la etiqueta de aper
 
 Etiquetas semánticas:
 * Table
-  - Thead: encabezado, donde están los tr y th (celdas)
-  - Tbody: tr y th
+  - Thead: encabezado, donde están los tr >td y th (celdas). las th solo van en el head
+  - Tbody: tr y td
   - Tfoot: para valores totales
+  - puedo unificar celdas con las propiedades rowspan y colspan
 
 SELECTORES tenemos en:
 selectores desde js: de id, de etiqueta, de clase.
 selectores desde css: de id, de etiqueta, de clase.
 
-CSS:
+SELECTORES EN CSS:
 Selector de etiqueta es directamente el nombre de la etiqueta.
 Selector de id es con hashtag: #nombre-id
 Selector de clase es con punto: .class
 
-Especificidad de selector: id > class > tag. influyen en la tupla (id, class, tag)
-
-Short hand = atajos (lo que va en una sola linea).
+ESPECIFICIDAD de selector: id > class > tag. influyen en la tupla (id, class, tag)
 
 Cuando veo a distintos elementos le voy a aplicar la misma regla de estilo puedo poner los selectores separado por una coma.
 
@@ -253,7 +252,7 @@ Tenemos distintos short hand:
 En la realidad se termina trabajando con proporciones o porcentajes, no en pixeles o rem.
 Lo que se suele hacer es usar "box-sizing: border-box;" en el selector universal.
 
-Para unificar filas o columnas uso row span o col span (van en una td).
+Para unificar filas o columnas uso rowspan o colspan (van en una td).
 
 ETIQUETAS CONTENEDORAS: permiten definir la estructura jerárquica del documento HTML.
 * div: contenedor en bloque. (SIN EFECTO VISUAL EN LA PAGINA)
@@ -267,57 +266,3 @@ ETIQUETAS CONTENEDORAS: permiten definir la estructura jerárquica del documento
 * main: representa el contenido principal del documento (1 solo main por documento).
 * form: agrupa controles de formulario y etiquetas para enviar datos al servidor.
 
->>>> CLASE 4:
-
-LISTAS en HTML:
-* Ordenadas (ol):
-* No ordenadas (ul)
-* De definición (dl): dentro tienen <dt> (término) y <dd> (definición del término)
-se puede cambiar el default con el atributo 'type' o desde CSS con 'list-style-type'
-
-elementos interactivos:
-* <details> (detalles): genera un desplegable y por dentro podría usar un 'summary' (titulo de la explicación)
-* <dialog>:
-
-CDN: red de despacho de contenido
-
-IMAGENES: formatos: jpg, png (tiene transparencia), ico, bmp, svg.
-
-CADENA: rel="noopener noreferrer nofollow" (etiqueta de enlace <a>)
-* noopener: Previene que la nueva página tenga acceso al objeto 'Windows.opener' del navegador, evitando potenciales ataques de phishing o redireccionamientos maliciosos.
-* noreferrer: El sitio de destino no sabrá desde qué página fue el usuario. Protege la información sobre la procedencia del tráfico.
-* nofollow: indica a los motores de búsqueda que no deben seguir el enlace y no deben pasar autoridad o ranking SEO al sitio de destino.
-
-Cuándo usarlos:
-noopener y noreferrer: Se deben usar siempre que un enlace abra una nueva pestaña o ventana (target="_blank").
-nofollow: Se debe usar cuando se quiere evitar que los motores de búsqueda sigan el enlace, como en enlaces pagos, enlaces de usuarios en comentarios, o cualquier enlace que no se desea que pase autoridad SEO.
-
-MAQUETADO:
-* SPA: sensación de aplicación de ventana.
-* Etiquetas contenedoras: div, span, main, etc.
-
-Etiquetas semánticas:
-<time>: para fechas importantes
-<em>: énfasis
-<strong> texto importante
-<mark> texto resaltado.
-
-MINIFICADO: Proceso de reducir el tamaño de archivos para que ocupen menos espacio.
-OFUSCACIÓN: Proceso de hacer que el código sea difícil de leer y entender.
-
-MICRODATOS: Marcado estructurado en HTML para proporcionar datos adicionales.
-
-IFRAME: Elemento HTML para incrustar otro documento HTML dentro de la página actual.
-
-FORMULARIOS <form>: nos va a permitir hacer peticiones.
-Cuando el formulario lanza el evento 'submit', nosotros tomamos el control de eso.
-
-Elementos del formulario:
-* input: el atributo type='submit' es el botón enviar. otros atributos: cheekbox, radio, text, number, etc.
-* label: el atributo 'for' es para vincularlo con un elemento de formulario y darle foco.
-* action y method no lo vamos a usar (viene por default)
-* required es un atributo booleano. si esta presente, es true
-* readonly: solo lectura
-* desabled: deshabilitado (hasta que pase algo)
-* placeholder: para indicar que ingresar (luego desaparece)
-* evento submit: envía una petición (no lo vamos a hacer de esta forma)

@@ -46,3 +46,8 @@ html {
 .azul {
     color: green;
 }
+
+/*
+    Para poner en negrita la fuente de un elemento se usa: font-weight
+    Para aplicar una sombra al texto: box-shadow
+*/

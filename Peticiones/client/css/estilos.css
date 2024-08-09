@@ -1,0 +1,16 @@
+#loader-section{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.oculto{
+    display: none;
+}

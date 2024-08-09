@@ -2,8 +2,40 @@
 
 La manera de construir objetos en js es a través de 'funciones constructoras'
  - para crear e inicializar objetos.
- - se usan con el operador 'new' (objeto vacio)
+ - se usan con el operador 'new' (objeto vacío)
  - por convención, el nombre de la función empieza en Mayúscula
  - [las funciones regulares empiezan con minúsculas]
  - 'this' dentro de la función se refiere a ese nuevo objeto.
+ - en js los objetos son todos públicos
+ - un objeto es un array asociativo
 
+PROTOTYPE: es un objeto asociado a funciones constructoras, que se utiliza para implementar herencia y compartir métodos entre instancias de un objeto. El objeto 'prototype' de una función constructora contiene propiedades y métodos que serán compartidos por todas las instancias creadas por esa función.
+- Modificar el prototype: se puede añadir nuevas propiedades o métodos al 'prototype' incluso después de crear instancias. Ej: objeto.prototype.metodo = function…
+- prototype guarda la dirección de memoria [de la mochila]
+
+CADENA PROTOTIPICA:
+
+>>>> CLASE 8:
+Peticiones
+
+Json-server -> dependencias
+
+npm install: para que me descargue las dependencias necesarias en caso de descargar un proyecto de tercero
+npm install -g xxxxxx [el -g] es a nivel global/Usuario
+
+En el visual en la carpeta 'server' > abrir terminal integrado, puedo escribir 'node app.js' y me va a ejecutar ese archivo y mostrar el 'Hola mundo'.
+- Para no escribir 'node app.js' lo guardo en el script "start" y ejecuto: npm start
+
+con 'npm run' veo los script guardados [los que forman parte del ciclo de vida]
+
+npm run server -> para levantar el servidor
+ctrl + c -> para salir del servidor
+
+
+>>>> CLASE 9:
+---- TEORIA
+¿Qué componente de la arquitectura cliente-servidor es responsable de la presentación de la interfaz de usuario al usuario final? r: cliente.
+¿Cuál de las siguientes tecnologías de red se utiliza comúnmente en la arquitectura cliente-servidor? r: http.
+¿Cuál es la función principal del servidor en la arquitectura cliente-servidor? r: procesar y almacenar datos.
+¿Cuál es el concepto principal de la arquitectura cliente-servidor? r: la separación de roles entre un cliente y un servidor.
+¿Cuál de las siguientes tecnologías permite una comunicación bidireccional en tiempo real entre el cliente y el servidor? r: Ajax

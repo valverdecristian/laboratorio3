@@ -107,6 +107,7 @@ OBJETOS: es un conjunto de clave-valor
  - un OBJETO LITERAL se define usando llaves '{}'. Permite la inicialización directa de sus propiedades.
  - un OBJETO A TRAVES DE UN CONSTRUCTOR se utiliza 'new Object()', también se puede inicializar con un valor primitivo, que será envuelto en su correspondiente objeto.
  - OBJECT.CREATE(proto) crea un nuevo objeto que hereda de proto, es útil para establecer la herencia entre objetos sin necesidad de una función constructora.
+
  - ACCESO A PROPIEDADES: de un objeto a través de la notación punto o de corchetes. La notación de corchetes permite el uso de variables para acceder a las propiedades.
 
 RECORRER UN OBJETO:
@@ -119,7 +120,7 @@ for...in: Recorre todas las claves de un objeto.
 for...of: Recorre los valores de una estructura iterable (arrays, strings, etc.). No se puede usar directamente sobre objetos.
 forEach: Itera sobre arrays y ejecuta una función de callback en cada elemento.
 
-CADENA PROTOTIPICA:
+CADENA PROTOTIPICA (Prototype Chain) ** mejor explicado con la clase 7. Asociado con herencia prototípica.
 
 VALOR PRIMITIVO:
 * cadenas: ""

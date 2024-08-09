@@ -1,0 +1,16 @@
+>>>> CLASE 7:
+
+La manera de construir objetos en js es a través de 'funciones constructoras'
+ - para crear e inicializar objetos.
+ - se usan con el operador 'new' (objeto vacío)
+ - por convención, el nombre de la función empieza en Mayúscula
+ - [las funciones regulares empiezan con minúsculas]
+ - 'this' dentro de la función se refiere a ese nuevo objeto.
+ - en js los objetos son todos públicos
+ - un objeto es un array asociativo
+
+PROTOTYPE: es un objeto asociado a funciones constructoras, que se utiliza para implementar herencia y compartir métodos entre instancias de un objeto. El objeto 'prototype' de una función constructora contiene propiedades y métodos que serán compartidos por todas las instancias creadas por esa función.
+- Modificar el prototype: se puede añadir nuevas propiedades o métodos al 'prototype' incluso después de crear instancias. Ej: objeto.prototype.metodo = function…
+- prototype guarda la dirección de memoria [de la mochila]
+
+CADENA PROTOTIPICA:
