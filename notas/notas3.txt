@@ -14,3 +14,69 @@ PROTOTYPE: es un objeto asociado a funciones constructoras, que se utiliza para 
 - prototype guarda la dirección de memoria [de la mochila]
 
 CADENA PROTOTIPICA:
+
+>>>> CLASE 8:
+Peticiones
+
+Json-server -> dependencias
+
+npm install: para que me descargue las dependencias necesarias en caso de descargar un proyecto de tercero
+npm install -g xxxxxx [el -g] es a nivel global/Usuario
+
+En el visual en la carpeta 'server' > abrir terminal integrado, puedo escribir 'node app.js' y me va a ejecutar ese archivo y mostrar el 'Hola mundo'.
+- Para no escribir 'node app.js' lo guardo en el script "start" y ejecuto: npm start
+
+con 'npm run' veo los script guardados [los que forman parte del ciclo de vida]
+
+npm run server -> para levantar el servidor
+ctrl + c -> para salir del servidor
+
+
+>>>> CLASE 9:
+---- TEORIA
+¿Qué componente de la arquitectura cliente-servidor es responsable de la presentación de la interfaz de usuario al usuario final? r: cliente.
+¿Cuál de las siguientes tecnologías de red se utiliza comúnmente en la arquitectura cliente-servidor? r: http.
+¿Cuál es la función principal del servidor en la arquitectura cliente-servidor? r: procesar y almacenar datos.
+¿Cuál es el concepto principal de la arquitectura cliente-servidor? r: la separación de roles entre un cliente y un servidor.
+¿Cuál de las siguientes tecnologías permite una comunicación bidireccional en tiempo real entre el cliente y el servidor? r: Ajax
+
+
+API REST
+* API: es un conjunto de métodos
+* rest: transferencia del estado representacional. peticiones: no guardan estado.
+
++ sobre rest: es un estilo de arquitectura que utiliza el protocolo HTTP para realizar operaciones CRUD (Create, Read, Update, Delete) sobre recursos que están representados en forma de datos (generalmente JSON).
+
+1) RECURSOS: un "recurso" en una API REST es cualquier dato que puede ser identificado y manipulado a través de la API (usuarios, productos, artículos, etc).
+
+2) OPERACIONES HTTP: las API REST utilizan métodos HTTP para interactuar con los recursos:
+GET(recupera recursos)
+POST(crea un nuevo recurso)
+PUT(actualiza un recurso existente): reemplaza completamente el recurso existente. Cuando hago una solicitud con 'put' tengo que enviar la representación completa, porque sino elimino los campos no incluidos en la solicitud.
+DELETE
+PATCH(actualizaciones parciales): cuando hago una solicitud con 'patch', solo los campos incluidos en la solicitud se actualizan, los demás campos permanecen intactos.
++ Get: lectura, no modifica el servidor.
++ post: modifica el servidor cada vez q lo envió.
+
+3) ESTADO REPRESENTACIONAL: cada solicitud al servidor devuelve una representación del estado actual del recurso, generalmente en JSON. El cliente puede manipular estos datos.
+4) SIN ESTADO (STATELESS): Cada solicitud del cliente al servidor debe contener toda la información necesaria para que el servidor procese esa solicitud. El servidor no mantiene ningún estado de sesión o información de la solicitud previa (sin estado).
+
+AJAX:
+- implementa la sincronia con callbacks
+
+API FETCH
+- promesas, que luego el profe la hizo asíncrona
+
+AJAX y FETCH son nativas de JavaScript
+
+Bootstrap: necesita jQuery y Popper.
+bower: administrador de paquetes
+
+Bootstrap:
+sintaxis en el head:
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" class="">
+
+el cdn de cada hoja de estilo
+
+
+

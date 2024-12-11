@@ -1,0 +1,13 @@
+Bootstrap
+
+Es un framework/libreria de codigo abierto para el desarrollo de paginas web. [front]
+Facilita la creación de interfaces de usuario modernas y responsivas.
+Clases pre-armadas
+Necesita de jQuery y Popper
+
+Características de Bootstrap:
+1) Responsive Desing: diseñado para ser "responsive", osea que la pagina web se adapta automáticamente a diferentes tamaños de pantallas y dispositivos. Utiliza un sistema de cuadriculas (grid system) que permite diseñar layouts que se adaptan a diferentes resoluciones y tamaños de pantalla.
+2) Componentes predefinidos: Bootstrap incluye una amplia grama de componentes CSS y JS, como botones, formularios, barras de navegación, y más.
+3) Consistencia: mantiene una apariencia y comportamiento consistente en todas las partes de un sitio web.
+
+Grillas de Bootstrap: cuando las columnas colapsan

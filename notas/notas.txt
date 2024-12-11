@@ -7,7 +7,7 @@ Compilar vs Transpilar:
 TECNOLOGÍAS:
 HTML, CSS y JS: Tecnologías básicas para la creación de sitios web.
 1. HTML para definir el contenido de las páginas web.
-2. CSS para especificar el diseño de las páginas web.
+2. CSS para el diseño de las páginas web.
 3. JavaScript para programar el comportamiento de las páginas web (paginas de web dinámicas).
 
 * AJAX: Técnica para realizar peticiones asíncronas en JavaScript. (se piden datos y con esos datos modificar dinámicamente una parte de la pagina).
@@ -17,12 +17,12 @@ HTML, CSS y JS: Tecnologías básicas para la creación de sitios web.
 * Visual Studio Code: Editor de código fuente.
 
 PROGRAMACIÓN WEB:
-* Single Page Applications: Es una única pagina, que a través de la tecnología AJAX, pide datos para actualizar secciones del sitio web y no toda la pagina.
-* Las paginas se arman de manera dinámica (antes de manera estática).
+* Single Page Applications: Es una única página, que a través de la tecnología AJAX, pide datos para actualizar secciones del sitio web y no toda la página.
+* Las páginas se arman de manera dinámica (antes de manera estática).
 * El archivo principal de cualquier sitio web es un archivo con extensión HTML y por convención se llama 'index.html'.
 * hay dos tiempos: tiempo de desarrollo y tiempo de producción.
-* de Desarrollo: Creación de recursos informáticos. (cuando estamos armando el codigo).
-* de Producción: Producto final en el servidor. (cuando nuestro producto esta en el disco rigido de nuestro servidor)
+* de Desarrollo: Creación de recursos informáticos. (cuando estamos armando el código).
+* de Producción: Producto final en el servidor. (cuando nuestro producto esta en el disco rígido de nuestro servidor)
 * la comunicación es el protocolo http: entre cliente y servidor.
 
 CLIENTE Y SERVIDOR:
@@ -38,7 +38,7 @@ IP: Identificador del dispositivo en una red.
 Servidores DNS: Sistema que traduce nombres de dominio en direcciones IP (es como una lista de contactos).
 Hosting: Alquiler de espacio en un servidor.
 
-URL se envia la dirccion al DNS
+URL se envía la dirección al DNS
 
 BASE DE DATOS:
 * Relacionales: SQL Server, MySQL. Tablas (columnas y filas).
@@ -59,10 +59,6 @@ HTML:
 Etiquetas en bloque vs. en línea:
 Bloque: Ocupan todo el ancho disponible (p.ej., <div>, <p>).
 En línea: Sólo el ancho del contenido (p.ej., <span>, <a>).
-
-CSS: lenguaje de estilos: Hojas de estilo en cascada.
-* Regla de estilo: marca la especificidad
-* Es muy importante el selector.
 
 SEO: Optimización para motores de búsqueda. Analizan el significado de los elementos dentro de una pagina.
 
@@ -181,13 +177,13 @@ CONCURRENCIA: varios procesos concurren a la vez.
 El profe uso de ejemplo el bufet el cual Lili atiende con prioridad a los profes y luego a los alumnos, ella puede atender a ambos, pero no al mismo tiempo.
 Es un único hilo que va atendiendo varios procesos. Es una manera de manejar la ASINCRONIA.
 
-EVENTOS: Es asíncrona (no bloqueante). Cuando se detecta una acción del usuario o algún cambio en la pagina se lanza evento.
+EVENTOS: Es asíncrona (no bloqueante). Cuando se detecta una acción del usuario o algún cambio en la pagina se lanza el evento.
 * Firma: generalmente incluye el tipo del evento y la función manejadora (que puede recibir un objeto 'event' como argumento)
 * Manejador del evento (evento handler): es una función que se ejecuta en respuesta a un evento especifico.
 
 * addEventListener: La forma más flexible y recomendada para manejar eventos es usando addEventListener, ya que permite adjuntar múltiples manejadores de eventos al mismo elemento para el mismo evento.
 
-Firma: objeto.addEventListener("", función)
+Firma: objeto.addEventListener("string", función)
 
 >>>> CLASE 3: **** REPASADO ****
 
@@ -198,14 +194,14 @@ FUNCIONES (ciudadanos de 1ra clase):
 * puedo pasar una función como argumento de otra función.
 
 hay dos eventos:
-* load: se lanza cuando esta renderizada la pagina (todos los recursos cargados)
+* load: se lanza cuando esta renderizada la página (todos los recursos cargados)
 * DOMContentLoad: (en cambio, cuando creo los nodos automáticamente se dispara ese evento, y podría faltar recursos multimedios por cargar)
 
 El método 'document.getElementById' toma un único argumento, que es el valor del atributo id del elemento que deseas seleccionar. Retorna una referencia al primer objeto 'Element' con el id especificado, o 'null' si no se encuentra ningún elemento.
 
 Si yo quiero registrar en el objeto Windows un evento, con la modalidad método usamos 'addEventListener'
 
-Una pagina web termina siendo un árbol de nodos (elementos nodos, como todas las etiquetas de HTML). todos tienen el evento 'addEventListener(p1=string, p2=funcion)'.
+Una página web termina siendo un árbol de nodos (elementos nodos, como todas las etiquetas de HTML). todos tienen el evento 'addEventListener(p1=string, p2=funcion)'.
 
 ****************************************** [es la manera mas prolija]
 
@@ -227,37 +223,12 @@ Etiquetas semánticas:
   - Tfoot: para valores totales
   - puedo unificar celdas con las propiedades rowspan y colspan
 
-SELECTORES tenemos en:
-selectores desde js: de id, de etiqueta, de clase.
-selectores desde css: de id, de etiqueta, de clase.
-
-SELECTORES EN CSS:
-Selector de etiqueta es directamente el nombre de la etiqueta.
-Selector de id es con hashtag: #nombre-id
-Selector de clase es con punto: .class
-
-ESPECIFICIDAD de selector: id > class > tag. influyen en la tupla (id, class, tag)
-
-Cuando veo a distintos elementos le voy a aplicar la misma regla de estilo puedo poner los selectores separado por una coma.
-
-BOX MODEL (modelo de caja)
-* Margin: los campos laterales se suman, en cambio los campos de arriba y abajo se superponen.
-* Border: borde alrededor del padding y content.
-* Padding: espacio entre contenido y el borde.
-* Content: área donde muestra el contendio (texto, img)
-
-Tenemos distintos short hand:
-* para Padding: 1 valor (los 4 costados); 2 valores (top-bottom; L-R); 3 valores(top, L-R, bottom); 4 valores (top, right, bottom y left)
-
-En la realidad se termina trabajando con proporciones o porcentajes, no en pixeles o rem.
-Lo que se suele hacer es usar "box-sizing: border-box;" en el selector universal.
-
 Para unificar filas o columnas uso rowspan o colspan (van en una td).
 
 ETIQUETAS CONTENEDORAS: permiten definir la estructura jerárquica del documento HTML.
 * div: contenedor en bloque. (SIN EFECTO VISUAL EN LA PAGINA)
 * span: contenedor en linea. (SIN EFECTO VISUAL EN LA PAGINA)
-* header: representa la cabecera de una pagina, puede contener encabezados, logotipos, menús de navegación, etc.
+* header: representa la cabecera de una página, puede contener encabezados, logotipos, menús de navegación, etc.
 * footer: representa el pie de página, puede contener información de contacto, derechos de autor, enlaces a políticas de privacidad, etc.
 * section: define una sección de un documento, como capitulo, encabezado o alguna agrupación temática de contenido.
 * article: para articulo de revista, entrada de blog, un comentario, etc. [tienen sentido propio]
@@ -265,4 +236,3 @@ ETIQUETAS CONTENEDORAS: permiten definir la estructura jerárquica del documento
 * aside: define contenido adicional (barra lateral) [publicidad]
 * main: representa el contenido principal del documento (1 solo main por documento).
 * form: agrupa controles de formulario y etiquetas para enviar datos al servidor.
-

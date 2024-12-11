@@ -1,0 +1,50 @@
+CSS significa "Hojas de estilo en cascada".
+* Regla de estilo: marca la especificidad
+* Es muy importante el selector.
+
+Vinculacion interna: Etiqueta style en el head
+Vinculación en linea: con el atributo style.
+Vinculación externa: link:css
+
+Lo ideal es trabajar con archivos externos y luego linkearlos
+
+reglas de estilo compuesto por: selector y bloque de declaración.
+* Selector:
+  - para combinar en una "lista de selectores" uso una coma. Si alguno de los selectores no es valido, el navegador ignora toda la regla, osea que no se aplica el estilo.
+
+  - Selectores:
+    * De tipo: el nombre de la etiqueta (h1, p, etc.)
+    * De id: es con hashtag (#nombre-id)
+    * De clase: es con punto (.class)
+    * Universal: el * [todos los elementos de la pagina]
+    * Combinadores (hijo): article > p {propiedades}
+
+  - ESPECIFICIDAD de selector: id > class > tag. influyen en la tupla (id, class, tag)
+
+* Bloque de declaración: entre llaves.
+
+BOX MODEL (modelo de caja)
+* Margin: los campos laterales se suman, en cambio los campos de arriba y abajo se superponen.
+  - box-sizing: es como voy a dimensionar las cajas. [valor: border-box o content-box]
+* Border: borde alrededor del padding y content.
+* Padding: espacio entre contenido y el borde.
+* Content: área donde muestra el contendio (texto, img)
+
+Tenemos distintos short hand:
+* para Padding: 1 valor (los 4 costados); 2 valores (top-bottom; L-R); 3 valores(top, L-R, bottom); 4 valores (top, right, bottom y left)
+* para border: 3 valores (width, style, color)
+* para marging: top y bottom se colapsan. La misma shorthand que en el padding.
+
+En la realidad se termina trabajando con proporciones o porcentajes, no en pixeles o rem.
+Lo que se suele hacer es usar "box-sizing: border-box;" en el selector universal.
+
+COLORES:
+- los que vienen definido: red, blue, etc.
+- RGB: RGB(0, 255, 255) [tiene 256]
+- RGBA: hace referencia a la opacidad, que va de 0 (transparente) a 1 (solido).
+- Hexadecimales: con el #
+- al background le puedo poner una imagen: background-img: url(./url);
+  * si quiero respetar el tamaño de la imagen utilizo "background-size: contain"
+  * background-repeat: no-repeat
+
+A los elementos de bloque los puedo tratar como elementos de linea con la propiedad: "display: inline-block" [por ejemplo para el <div>]
